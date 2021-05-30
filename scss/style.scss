@@ -1,0 +1,859 @@
+// Файл обнуляющих стилей
+@import "nullstyle.scss";
+
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+// font-family: 'Inter', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+// font-family: 'Open Sans', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+// font-family: 'Rubik', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+// font-family: 'Montserrat', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap');
+// font-family: 'IM Fell English', serif;
+@import url("/fonts/gilroy/stylesheet.css");
+// font-family: 'Gilroy';
+
+
+
+
+body{
+	background: rgb(4,13,62);
+	background: linear-gradient(90deg, rgba(4,13,62,1) 10%, rgba(59,29,96,1) 90%);
+	color: #8476AA;
+}
+
+
+// Переменные для блока
+$minWidth:320px;
+$maxWidth:1152px;
+$maxWidthCon:1144px;
+$md1:$maxWidthCon + 12;
+$md2:991.98px;
+$md3:767.98px;
+$md4:479.98px;
+
+
+// Переменные для Цвета
+$pink:#ff6464;
+$black:#000;
+$white:#fff;
+
+
+$orange:#F2994A;
+
+$salat:#99EFD0;
+$purple:#8476AA;
+$white:#fff;
+$grey:#B5B5B5;
+
+
+// Основная сетка
+._container{
+	max-width: $maxWidthCon;
+	margin: 0 auto;
+	padding: 0px 20px;
+
+	@media (max-width:$md1) {
+		max-width: 970px;
+	}
+	@media (max-width:$md2) {
+		max-width: 750px;
+	}
+	@media (max-width:$md3) {
+		max-width: none;
+		padding: 0 10px;
+	}
+}
+
+.wrapper{
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+
+}
+
+.page{
+	padding: 90px 0px 0px 0px;
+	flex: 1 1 auto;
+	@media (max-width:$md1) {
+		padding: 30px 0px 0px 0px;
+
+	}
+}
+
+.header{
+	margin-top: 60px;
+	position: relative;
+	z-index: 100;
+	@media (max-width:$md3) {
+		margin-top: 0px;
+
+	}
+}
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 62px;
+}
+
+.hamburger {
+	display: none;
+}
+
+.bar {
+	display: block;
+	width: 25px;
+	height: 3px;
+	margin: 5px auto;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	background-color: $orange;
+}
+
+.nav-menu {
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav-item {
+	margin-right: 33px;
+}
+
+.nav-link{
+	font-family: 'Gilroy';
+	font-weight: 600;
+	color:$grey;
+	font-size: 12px;
+	line-height: 20px;	
+	/* identical to box height, or 167% */
+	letter-spacing: 2px;
+	text-transform: uppercase;
+
+}
+
+.nav-link:hover{
+	color: $salat;
+	transition: all 0.3s ease 0s;
+}
+
+
+@media only screen and (max-width: 767px) {
+	.header__button{
+		.sign-up,.sign-in{
+			display: none;
+		}
+	}
+	.nav-menu {
+		 position: fixed;
+		 left: -100%;
+		 top: 5rem;
+		 flex-direction: column;
+		 background-color: #fff;
+		 width: 100%;
+		 border-radius: 10px;
+		 text-align: center;
+		 transition: all 0.3s ease 0s;
+		 box-shadow:
+			  0 10px 27px rgba(0, 0, 0, 0.05);
+	}
+
+	.nav-menu.active {
+		 left: 0;
+		 color: $pink;
+	}
+
+	.nav-link{
+		color: #000;
+	}
+
+	.nav-item {
+		 margin: 1.7rem 0;
+
+	}
+
+	.hamburger {
+		 display: block;
+		 cursor: pointer;
+	}
+
+	.hamburger.active .bar:nth-child(2) {
+	opacity: 0;
+	}
+
+	.hamburger.active .bar:nth-child(1) {
+	transform: translateY(8px) rotate(45deg);
+	}
+
+	.hamburger.active .bar:nth-child(3) {
+	transform: translateY(-8px) rotate(-45deg);
+	}
+}
+
+@media (max-width:$md2) {
+	.header__button{
+		.sign-up,.sign-in{
+			display: none;
+		}
+	}
+}
+/*----------------------------------------------------------------------*/
+// hello
+.hello{
+	background: url(../img/man.png) bottom -5rem right -5rem no-repeat;
+	background-size: 50rem;
+	padding: 38px 0px 70px 0px;
+	@media (max-width:$md1) {
+		background: url(../img/man.png) bottom -5rem right -15rem no-repeat;
+		background-size: 50rem;
+		padding: 38px 0px 70px 0px;
+	}
+	@media (max-width:$md2) {
+		background: url(../img/bg2.png) no-repeat;
+		background-size: 100rem;
+	}
+	@media (max-width:$md3) {
+	padding: 30px 0px 0px 0px;
+
+
+	}
+
+	&__container{
+		display: flex;
+		@media (max-width:$md3) {
+			text-align: center;
+			flex-direction: column-reverse;
+		}
+	}
+	&__content{
+		align-items: flex-start;
+		flex:1 1 auto;
+		padding: 18px 110px 0px 0px;
+		@media (max-width:$md1) {
+			padding: 18px 50px 0px 0px;
+		}
+		@media (max-width:$md3) {
+			padding: 0px 0px 0px 0px;
+		}
+	}
+	&__title{
+		font-family: 'IM Fell English', serif;
+		font-weight: 400;
+		font-size: 44px;
+		color: $salat;
+		margin-bottom: 25px;
+		@media (max-width:$md3) {
+			margin-bottom: 15px;
+			font-size: 30px;
+		}
+
+	}
+	&__text{
+		margin-bottom: 35px;
+		font-family: 'Gilroy';
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 22px;
+		@media (max-width:$md3) {
+			margin-bottom: 20px;
+			padding: 0px 30px;
+		}
+	}
+	&__video{
+		margin-top: 60px;
+		display: flex;
+		@media (max-width:$md3) {
+			justify-content: center;
+		}
+
+		&__text{
+			margin-left: 15px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			font-family: 'Rubik';
+			text-align: left;
+			font-weight: 400;
+			line-height: 22px;
+			p{
+				font-size: 16px;
+			}
+			span{
+				color: #6D6D78;
+				font-size: 14px;
+			}
+		}
+		
+	}
+}
+.title-posts{
+	font-size: 22px;
+	@media (max-width:$md3) {
+		text-align: center;
+	}
+}
+.hello__button__left{
+	margin-right: 15px;
+}
+
+.btn{
+	border-radius:5px;
+	display: inline-flex;
+	height: 36px;
+	font-family: 'Rubik';
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: 500;
+	align-items: center;
+	justify-content: center;
+	font-size: 12px;
+	text-align: center;
+	line-height: 20px;
+	padding: 0px 30px;
+	transition: all 0.3s ease 0s;
+	&._fw{
+		width: 100%;
+	}
+}
+
+.sign-in{
+	border: 2px solid $orange;
+	color: $orange;
+	margin-right: 10px;
+	@media (min-width: 992px) {
+		&:hover{
+			background-color:$orange;
+			color: $white;
+
+		}
+	}
+}
+
+.sign-up{
+	background-color:$orange;
+	color: $white;
+	@media (min-width: 992px) {
+		&:hover{
+			// background-color: #f57d15;
+			background-color:$salat;
+
+
+		}
+	}
+	-webkit-box-shadow: 0px 9px 83px 2px rgba(242, 153, 74, 0.58); 
+	-moz-box-shadow: 0px 9px 83px 2px rgba(242, 153, 74, 0.58); 
+	box-shadow: 0px 9px 83px 2px rgba(242, 153, 74, 0.58);;
+}
+
+._ibg{
+	position: relative;
+	img{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+
+	}
+}
+
+.active{
+	color: $pink;
+}
+
+
+/*----------------------------------------------------------------------*/
+// sponsors
+.sponsors{
+	padding: 0px 0px 0px 0px;
+	@media (max-width:$md1) {
+		padding: 38px 0px 70px 0px;
+	}
+	&__container{
+		display: flex;
+		padding: 0px 10px;
+	}
+	&__content{
+		display: flex;
+		justify-content: center;
+		&__card{
+			display: flex;
+			justify-content: center;
+			margin-top: 30px;
+
+		}
+		&__logo{
+			img{
+				height: 25px;
+			}
+		}
+	}
+
+	
+}
+
+/*----------------------------------------------------------------------*/
+// features
+.features{
+	background: url(../img/bg2.png) no-repeat;
+	background-size: 100%;
+	padding: 38px 0px 70px 0px;
+	@media (max-width:$md1) {
+		padding: 38px 0px 70px 0px;
+	}
+	@media (max-width:$md2) {
+		background: url(../img/bg2.png) no-repeat;
+		background-size: 100rem;
+	}
+	padding: 100px 0px 70px 0px;
+	@media (max-width:$md1) {
+		padding: 50px 0px 70px 0px;
+	}
+
+
+	&__container{
+		@media (max-width:$md3) {
+			text-align: center;
+		}
+	}
+	&__content{
+
+	}
+	&__title{
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	&__text{
+		text-align: center !important;
+	}
+	&__items{
+		margin-top: 50px;
+	}
+	&__item{
+		margin-top: 30px;
+		&__content{
+			display: flex;
+			align-items: center;
+		}
+		&__icon{
+
+		}
+		&__subtitle{
+			margin: 0;
+			margin-left: 25px;
+		}
+		&__text{
+			margin-top: 10px;
+			padding-left: 50px;
+			text-align: left;
+		}
+	}
+
+}
+
+.title{
+	font-family: 'Inter';
+	font-size: 42px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 50px;
+	letter-spacing: 0px;
+	color: $salat;
+	@media (max-width:$md3) {
+		font-size: 26px;
+	}
+}
+
+.subtitle{
+	font-family: 'Gilroy';
+	font-size: 18px;
+	line-height: 22px;
+	font-weight: 700;
+	letter-spacing: 0px;
+	color: $salat;
+}
+
+
+.sub-text{
+	font-size: 16px;
+	font-family: 'Gilroy';
+	text-align: left;
+	font-weight: 700;
+	line-height: 22px;
+}
+
+.text{
+	font-size: 14px;
+	font-family: 'Gilroy';
+	font-weight: 700;
+	line-height: 22px;
+}
+
+
+
+/*----------------------------------------------------------------------*/
+// traffic
+.traffic{
+	padding: 120px 0px 0px 0px;
+	@media (max-width:$md1) {
+		padding: 50px 0px 70px 0px;
+	}
+	@media (max-width:$md3) {
+		text-align: center;
+	}
+	&__container{
+		display: flex;
+		padding: 0px 10px;
+	}
+	&__content{
+		&__item{
+			margin-top: 30px;
+		}
+		&__image{
+			margin-top: 30px;
+			display: flex;
+			justify-content: flex-end;
+			img{
+				width: 100%;
+				
+			}
+			@media (max-width:$md3) {
+				margin-top: 50px;
+			}
+		}
+	}
+
+	&__title{
+
+	}
+	&__sub-text{
+		margin: 30px 0px 40px 0px;
+	}
+	&__button{
+
+	}
+
+	
+}
+
+
+/*----------------------------------------------------------------------*/
+// way
+.way{
+	background: url(../img/bg3.png) top -5rem left no-repeat;
+	background-size: 30rem;
+	padding: 38px 0px 70px 0px;
+	@media (max-width:$md3) {
+		background: url(../img/bg3.png) top 15rem left no-repeat;
+		background-size: 30rem;
+	}
+	text-align: center;
+	padding: 120px 0px 0px 0px;
+	@media (max-width:$md1) {
+		padding: 50px 0px 70px 0px;
+	}
+	&__container{
+		padding: 0px 10px;
+	}
+	&__content{
+		display: flex;
+		&__item{
+			margin-top: 30px;
+		}
+	}
+
+	&__title{
+		margin-bottom: 30px;
+	}
+	&__sub-text{
+		text-align: center !important;
+		margin: 10px 0px 40px 0px;
+	}
+	
+}
+
+.orange-word{
+	color: $orange;
+}
+
+/*----------------------------------------------------------------------*/
+// project
+.project{
+	background: url(../img/bg4.png) bottom no-repeat;
+	background-size: 100%;
+	padding: 38px 0px 70px 0px;
+	height: 750px;
+	@media (max-width:$md1) {
+		height: 550px;
+		padding: 50px 0px 70px 0px;
+	}
+	@media (max-width:$md2) {
+		height: 450px;
+
+	}
+	@media (max-width:$md3) {
+		height: 400px;
+	}
+	text-align: center;
+	padding: 120px 0px 0px 0px;
+	&__container{
+		padding: 0px 10px;
+	}
+	&__content{
+		text-align: center;
+	}
+
+	&__title{
+		margin-bottom: 40px;
+	}
+	
+}
+
+.orange-word{
+	color: $orange;
+}
+
+.business{
+	background: url(../img/materik.png) top 10rem right 0rem no-repeat;
+	background-size: 50rem;
+	@media (max-width:$md1) {
+		background: url(../img/materik.png) top 10rem right 0rem no-repeat;
+		background-size: 50rem;
+	}
+	@media (max-width:$md2) {
+		background: url(../img/materik.png) top 0rem right 0rem no-repeat;
+		background-size: 50rem;
+	}
+}
+
+/*----------------------------------------------------------------------*/
+// office
+.office{
+	background: url(../img/bg5.png) top -8rem right 0rem no-repeat;
+	background-size: 25rem;
+	@media (max-width:$md1) {
+		background: url(../img/bg5.png) top -8rem right 0rem no-repeat;
+		background-size: 25rem;
+	}
+	@media (max-width:$md2) {
+		background: url(../img/bg5.png) top -15rem right 0rem no-repeat;
+		background-size: 35rem;
+	}
+	padding: 120px 0px 0px 0px;
+	@media (max-width:$md1) {
+		padding: 50px 0px 70px 0px;
+	}
+	@media (max-width:$md3) {
+		text-align: center;
+	}
+	&__container{
+		display: flex;
+		padding: 0px 10px;
+
+	}
+	&__content{
+		@media (max-width:$md2) {
+			display: flex;
+			flex-direction: column-reverse;
+			text-align: center;
+		}
+
+		&__items{
+			margin-top: 30px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+		&__item{
+			margin-top: 30px;
+			
+		}
+		&__image{
+			margin-top: 30px;
+			display: flex;
+			justify-content: flex-start;
+			img{
+				width: 100%;
+				
+			}
+			@media (max-width:$md3) {
+				margin-bottom: 50px;
+			}
+		}
+	}
+	&__title{
+		font-family: 'Inter';
+		color: $salat;
+		font-size: 26px;
+		font-weight: 700;
+		line-height: 32px;
+		letter-spacing: 0.32499998807907104px;
+		text-align: left !important;
+		@media (max-width:$md2) {
+			margin-top: 50px;
+			display: flex;
+			justify-content: center;
+			text-align: center !important;
+		}
+
+	}
+	&__sub-text{
+		margin: 30px 0px 40px 0px;
+		@media (max-width:$md2) {
+			text-align: center;
+		}
+		
+	}
+	&__item__icon{
+		img{
+			margin-bottom: 15px;
+		}
+	}
+	
+}
+
+// feedback
+.feedback{
+	background: url(../img/bg6.png) top 5rem left no-repeat;
+	background-size: 100%;
+	padding: 120px 0px 0px 0px;
+	text-align: center;
+	@media (max-width:$md1) {
+		background: url(../img/bg6.png) top -15rem left no-repeat;
+		background-size: 150rem;
+	}
+	@media (max-width:$md2) {
+		background: url(../img/bg6.png) top -15rem left no-repeat;
+		background-size: 150rem;
+	}
+	@media (max-width:$md1) {
+		padding: 50px 0px 70px 0px;
+	}
+	&__container{
+		padding: 0px 10px;
+	}
+	&__content{
+		background: #13113f;
+		border-radius:10px;
+		padding: 50px 20px;
+		z-index: 40;
+	}
+
+	&__title{
+		font-size: 36px;
+		margin-bottom: 30px;
+		line-height: 43px;
+		color: $orange;
+		@media (max-width:$md1) {
+			font-size: 26px;
+		}
+	}
+	&__sub-text{
+		text-align: center !important;
+		margin: 10px 0px 40px 0px;
+		color: #95A1BB;
+		font-weight: 400;
+	}
+	&__text{
+		font-family: 'Gilroy';
+		font-size: 14px;
+		line-height: 20px;
+		margin-top: 20px;
+	}
+
+	&__input{
+		height: 50px;
+		width: 250px;
+		font-family: 'Inter';
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 20px;
+		text-align: left;
+		border-top-right-radius: 0px;
+		border-bottom-right-radius: 0px;
+		background-color: rgba(255, 255, 255, 0.1); 
+		border:none;
+
+	}
+	&__button{
+		height: 50px;
+		border-top-left-radius: 0px;
+		border-bottom-left-radius: 0px;
+		box-shadow:none;
+
+	}
+
+	&__btn{
+		display: flex;
+		justify-content: center;
+	}
+	
+}
+
+
+
+/*----------------------------------------------------------------------*/
+// footer
+
+.footer{
+	padding: 50px 0px;
+	@media (max-width:$md3) {
+		padding: 20px 0px;
+
+	} 
+
+	&__container{
+
+	}
+	&__header{
+		margin-bottom: 30px;
+		display: flex;
+		justify-content: space-between;
+	}
+	&__title{
+		color: $orange;
+		font-size: 32px;
+	}
+	&__social{
+		display: flex;
+		a{
+			margin-left: 10px;
+		}
+	}
+	&__copy{
+		text-align: center;
+		font-size: 14px;
+		margin-top: 30px;
+	}
+	&__items{
+		display: flex;
+		justify-content: space-between;
+	}
+	&__item{
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 20px;
+		a{
+			color: inherit;
+			cursor: pointer;
+			margin-bottom: 4px;
+			&:hover{
+				color: $salat;
+			}
+		}
+
+	}
+
+	
+}
+
+
